@@ -1,0 +1,282 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+ 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(248, 246, 246);
+  color: brown;
+  font-family:"Montserrat", sans-serif;
+  font-weight: 300;
+}
+.wrapper{
+  width: 1250px;
+ margin: 50px auto;
+
+}
+header {
+  position: relative;
+}
+
+
+header.logo{
+  font-weight: 600;
+  font-size: 20px;
+}
+/*кнопка*/
+header .shop-card-button {
+  float: right; /*кнопка расположена по правую сторону*/
+cursor: pointer;
+transition: color, transform 1000ms ease;
+
+}
+header .shop-card-button:hover,
+header .shop-card-button.active{
+
+  color: #EE2333;
+  transform: scale(1.5);
+  transition: 500ms ease;
+}
+
+
+header .shop-card {
+  position: absolute;
+  top: 30px;
+  right: 0;
+background: #cbe2ce;
+width: 450px;
+padding: 20px;
+padding-bottom: 0;
+box-shadow: 4px 4px 10px -2px rgba(0,0,0,0.34);
+-webkit-box-shadow: 4px 4px 10px -2px rgba(0,0,0,0.34);
+-moz-box-shadow: 4px 4px 10px -2px rgba(0,0,0,0.34);
+z-index: 1000;
+}
+header .shop-card .empty h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+
+header .shop-card .item {
+  width: 100%;
+  float: left;
+  margin-bottom: 20px;
+
+}
+
+
+header .shop-card .item .delite-icon {
+position: relative;
+float: right;
+top: -10px;
+color: #EE2333;
+cursor: pointer;
+transition: color, 1000ms ease;
+
+}
+header .shop-card .item .delite-icon:hover{
+  color: #791f26;
+  transform: scale(1.6);
+}
+
+header .shop-card .summa {
+  color: #0a0a0a;
+  font-weight: 600;
+  font-size: 20px;
+  float: left;
+  width: 100%;
+  margin-bottom: 10px;
+}
+header .shop-card .item img{
+  width: 70px;
+  float: left;
+  margin-right: 20px;
+  
+}
+
+header .shop-card .item h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+header .shop-card .item b {
+ color: #148323;
+ font-weight: 600;
+}
+
+header ul.nav {
+float: right;
+list-style: none;
+}
+
+header ul.nav li {
+  display: inline;
+  margin-left: 25px;
+  cursor: pointer;
+  transition: 500ms ease;
+}
+
+header ul.nav li:hover{
+  opacity: 0.5;
+}
+.presentation{
+  margin: 50px 0;
+  background: url(./img/jigul.jpg) no-repeat;
+  width: 100%;
+  height: 700px;
+  background-size: cover;
+  background-position: center center;/*позиция картинки по центру*/
+  background-blend-mode: multiply;/*наложение на картинку*/
+  background-color: rgb(254, 254, 254); /*цвет на картинку*/
+position: relative;
+}
+
+/*пишим текст на картинке*/
+
+.presentation::after{
+  content: 'Ретро автомобили России';
+  position: absolute;
+  width: 350px;
+  top: 60px;
+  left: 100px;
+  color: rgb(212, 228, 235);
+  font-size: 30px;
+  font-weight: 900;/*насыщенность шрифта*/
+}
+.presentation::before{
+  content: 'по низким ценам';
+  position: absolute;
+  width: 350px;
+  top: 150px;
+  left: 100px;
+  color: rgb(212, 228, 235);
+  font-size: 15px;
+  font-weight: 100;/*насыщенность шрифта*/
+}
+
+.categories div {
+  display: inline-block;
+  background: #e8e3e3;
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin-bottom: 25px;
+  margin-right: 15px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 500ms ease;
+}
+
+.categories div:hover{
+  border-color:  #EE2333;
+  transform: scale(1.1);
+}
+
+/*работа с изображениями*/
+main {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+main .item {
+  width: 30%;
+  margin-bottom: 50px;
+background: #b4adad;
+border-radius: 10px 10px 0 0;
+overflow: hidden;
+position: relative;
+margin-bottom: 20px;
+
+}
+main .item img {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px 10px 0 0;
+  transition: all linear .250s;
+    -webkit-transition: all linear .250s;
+}
+
+.full-item {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #85808071;
+  z-index: 9999;
+  overflow: auto;
+}
+
+.full-item>div {
+  width: 600px;
+  position: relative;
+  margin: 10% auto;
+  padding: 40px 30px;
+  background: #e8e3e3;
+  border-radius: 10px;
+}
+
+main .item img, .full-item img {
+  width: 100%;
+
+  border-radius: 10px 10px 0 0;
+  transition: all linear .250s;
+    -webkit-transition: all linear .250s;
+}
+
+
+main .item img:hover, .full-item img:hover {
+  transform: scale(1.02);
+  transition: 1000ms ease;
+}
+
+main h2,
+.full-item h2,
+ main b, 
+ .full-item b,
+  main p, 
+  .full-item p {
+  margin: 10px 20px;
+  color: #2D2C2D;
+}
+
+main b, .full-item b{
+  color: #148323;
+}
+
+main .add-to-card,
+.full-item .add-to-card
+{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background: rgb(197, 85, 85);
+width: 35px;
+height: 35px;
+text-align: center;
+line-height: 35px;
+color: rgb(255, 255, 255);
+border-radius: 50%;
+cursor: pointer;
+font-weight: 900;
+transition: all linear .25s;
+    -webkit-transition: all linear .25s;
+}
+
+main .add-to-card:hover,
+.full-item .add-to-card:hover
+{
+  transform: scale(1.5) translateY(-5px);
+transition: 500ms ease;
+
+}
+.footer{
+  margin-top: 100px;
+  text-align: center;
+}
+ 
